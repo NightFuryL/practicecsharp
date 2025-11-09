@@ -73,5 +73,21 @@ class Program
 
         for (int i = 0; i < k; i++)
             Console.Write(C[i] + " ");
+        //5
+        int[,] arr = {
+            { 5, 2, 9 },
+            { 1, 7, 3 },
+            { 8, 4, 6 }
+        };
+        int min = arr[0, 0];
+        int max = arr[0, 0];
+        for (int i = 0; i < arr.GetLength(0); i++)
+            for (int j = 0; j < arr.GetLength(1); j++)
+            {
+                if (arr[i, j] < min) min = arr[i, j];
+                if (arr[i, j] > max) max = arr[i, j];
+            }
+        Console.WriteLine("Min : " + min);
+        Console.WriteLine("Max : " + max);
     }
 }
